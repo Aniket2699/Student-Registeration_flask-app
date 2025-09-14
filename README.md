@@ -67,10 +67,6 @@ stud-reg-flask-app/
 │ 
 └── README.md # Project documentation
 
-yaml
-Copy code
-
----
 
 ## **Setup Instructions**
 
@@ -78,17 +74,17 @@ Copy code
 git clone https://github.com/Aniket2699/Student-Registeration_flask-app.git
 cd Student-Registeration_flask-app
 
-2. Create and Activate a Virtual Environment
+### **2. Create and Activate a Virtual Environment**
 
 python3 -m venv venv
 source venv/bin/activate   # Linux / Mac
 venv\Scripts\activate      # Windows
 
-4. Install Dependencies
+### **3. Install Dependencies**
 
 pip install -r requirements.txt
 
-6. Configure Environment Variables
+### **4. Configure Environment Variables**
 Create a .env file by copying .env.example:
 
 cp .env.example .env
@@ -104,7 +100,7 @@ DATABASE_PORT=3306
 DATABASE_NAME=student_db
 ⚠️ Note: Never commit .env to GitHub. It contains sensitive information.
 
-5. Set Up the Database
+### **5. Set Up the Database**
 Login to MySQL:
 
 
@@ -119,7 +115,7 @@ SHOW DATABASES;
 USE student_db;
 SHOW TABLES;
 
-6. Run Flask Application
+### **6. Run Flask Application**
 
 flask run
 By default, the app will run at:
@@ -142,18 +138,19 @@ See all registered students displayed in a table.
 Sample SQL Output
 When a student is registered successfully:
 
-sql
-Copy code
 mysql> SELECT * FROM students;
 +----+----------------+---------------------------+------------+--------+------------------------+---------------------+
 | id | name           | email                     | phone      | course | address                | created_at          |
 +----+----------------+---------------------------+------------+--------+------------------------+---------------------+
-|  5 | Aniket Dauskar | aniketdauskar99@gmail.com | 7620162625 | DevOps | 46, MARDI ROAD, RAJURA | 2025-09-14 10:02:47 |
+|  1 | Aniket Dauskar | aniketdauskar@gmail.com   |            | DevOps | 46, MARDI ROAD, RAJURA | 2025-09-14 10:02:47 |
 +----+----------------+---------------------------+------------+--------+------------------------+---------------------+
+
 Screenshots
 1. Registration Page
+Resgisteration page.png
 
-2. View Students Page
+3. View Students Page
+   Registered students.png
 
 Explanation of Major Components
 Component	Description
