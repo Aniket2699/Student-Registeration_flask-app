@@ -49,25 +49,6 @@ The project is ideal for learning:
 | **Deployment (Optional)** | AWS EC2 |
 | **CI/CD (Optional)** | Jenkins |
 
----
-
-## **📂 Project Structure**
-
-stud-reg-flask-app/
-├── app.py 
-├── config.py 
-├── requirements.txt 
-├── schema.sql 
-
-├── .env.example 
-├── templates/ 
-│ ├── base.html
-│ ├── register.html
-│ └── students.html
-├── static/
-│ └── css/
-│ └── styles.css 
-└── README.md 
 
 ## **⚙️ Setup Instructions**
 
