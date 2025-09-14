@@ -75,29 +75,26 @@ Copy code
 ## **Setup Instructions**
 
 ### **1. Clone the Repository**
-```bash
 git clone https://github.com/Aniket2699/Student-Registeration_flask-app.git
 cd Student-Registeration_flask-app
+
 2. Create and Activate a Virtual Environment
-bash
-Copy code
+
 python3 -m venv venv
 source venv/bin/activate   # Linux / Mac
 venv\Scripts\activate      # Windows
-3. Install Dependencies
-bash
-Copy code
+
+4. Install Dependencies
+
 pip install -r requirements.txt
-4. Configure Environment Variables
+
+6. Configure Environment Variables
 Create a .env file by copying .env.example:
 
-bash
-Copy code
 cp .env.example .env
 Update the .env file with your MySQL credentials:
 
-ini
-Copy code
+
 FLASK_ENV=development
 SECRET_KEY=your_secret_key_here
 DATABASE_USER=root
@@ -110,29 +107,24 @@ DATABASE_NAME=student_db
 5. Set Up the Database
 Login to MySQL:
 
-bash
-Copy code
+
 mysql -u root -p
 Run the schema file to create the database and table:
 
-sql
-Copy code
 SOURCE schema.sql;
 Verify:
 
-sql
-Copy code
+
 SHOW DATABASES;
 USE student_db;
 SHOW TABLES;
+
 6. Run Flask Application
-bash
-Copy code
+
 flask run
 By default, the app will run at:
 
-cpp
-Copy code
+
 http://127.0.0.1:5000/
 Usage
 Register a Student
