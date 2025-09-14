@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ 'Edit Student' if edit else 'Register Student' }}</h2>
+<form method="post" action="" novalidate>
+  <div class="mb-3">
+    <label class="form-label">Name *</label>
+    <input name="name" required class="form-control" value="{{ form.get('name','') }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email *</label>
+    <input name="email" required class="form-control" type="email" value="{{ form.get('email','') }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input name="phone" class="form-control" value="{{ form.get('phone','') }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Course</label>
+    <input name="course" class="form-control" value="{{ form.get('course','') }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Address</label>
+    <textarea name="address" class="form-control">{{ form.get('address','') }}</textarea>
+  </div>
+
+  <button class="btn btn-primary" type="submit">{{ 'Update' if edit else 'Register' }}</button>
+  {% if edit %}
+    <a href="{{ url_for('students') }}" class="btn btn-secondary">Cancel</a>
+  {% endif %}
+</form>
+{% endblock %}
+
