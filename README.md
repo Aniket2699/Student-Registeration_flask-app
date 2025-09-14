@@ -54,24 +54,20 @@ The project is ideal for learning:
 ## **📂 Project Structure**
 
 stud-reg-flask-app/
-├── app.py # Main Flask application
-├── config.py # Configuration file (DB, secrets, etc.)
-├── requirements.txt # Python dependencies
-├── schema.sql # MySQL schema for creating database & table
-├── .env.example # Environment variable template
-├── templates/ # HTML templates
+├── app.py 
+├── config.py 
+├── requirements.txt 
+├── schema.sql 
+
+├── .env.example 
+├── templates/ 
 │ ├── base.html
 │ ├── register.html
 │ └── students.html
 ├── static/
 │ └── css/
-│ └── styles.css # Custom styling
-└── README.md # Project documentation
-
-yaml
-Copy code
-
----
+│ └── styles.css 
+└── README.md 
 
 ## **⚙️ Setup Instructions**
 
