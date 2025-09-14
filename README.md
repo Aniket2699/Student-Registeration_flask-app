@@ -76,24 +76,22 @@ Copy code
 ## **⚙️ Setup Instructions**
 
 ### **1️⃣ Clone the Repository**
-```bash
+
 git clone https://github.com/Aniket2699/Student-Registeration_flask-app.git
 cd stud-reg-flask-app
-2️⃣ Create and Activate Virtual Environment
-bash
-Copy code
+### **2️⃣ Create and Activate Virtual Environment**
+
 python3 -m venv venv
 source venv/bin/activate   # Linux / Mac
 venv\Scripts\activate      # Windows
-3️⃣ Install Dependencies
-bash
-Copy code
+
+### **3️⃣ Install Dependencies**
+
 pip install -r requirements.txt
-4️⃣ Configure Environment Variables
+
+### **4️⃣ Configure Environment Variables**
 Create a .env file by copying the provided template:
 
-bash
-Copy code
 cp .env.example .env
 Edit the .env file and set your MySQL credentials:
 
@@ -108,27 +106,23 @@ DATABASE_PORT=3306
 DATABASE_NAME=student_db
 ⚠️ Important: Never commit your .env file to GitHub.
 
-5️⃣ Set Up the Database
+### **5️⃣ Set Up the Database**
 Login to MySQL:
 
-bash
-Copy code
 mysql -u root -p
 Run the schema file to create the database and table:
 
-sql
-Copy code
+
 SOURCE schema.sql;
 Verify:
 
-sql
-Copy code
+
 SHOW DATABASES;
 USE student_db;
 SHOW TABLES;
-6️⃣ Run the Flask Application
-bash
-Copy code
+
+### **6️⃣ Run the Flask Application**
+
 flask run
 By default, the app will run at:
 🌐 http://127.0.0.1:5000/
@@ -146,11 +140,10 @@ Go to /students
 
 See all registered students displayed in a table with options to edit or delete.
 
-🗄️ Sample Database Output
+### **🗄️ Sample Database Output**
 After registering a student, the database will show:
 
-sql
-Copy code
+
 mysql> SELECT * FROM students;
 +----+----------------+---------------------------+------------+--------+------------------------+---------------------+
 | id | name           | email                     | phone      | course | address                | created_at          |
@@ -166,7 +159,7 @@ mysql> SELECT * FROM students;
 <img width="1916" height="967" alt="Registered students" src="https://github.com/user-attachments/assets/cba9bce7-d53b-47bf-b27c-8636ce43e731" />
 
 
-🔍 Explanation of Major Components
+### **🔍 Explanation of Major Components**
 File / Folder	Description
 app.py	Core Flask app with routes for registration, data handling, and viewing students
 config.py	Centralized configuration for DB connection and Flask secret key
@@ -176,30 +169,27 @@ requirements.txt	Python dependencies list
 schema.sql	SQL commands to create database and table
 .env	Stores sensitive environment variables like DB credentials
 
-☁️ Optional Deployment on AWS EC2
+### **☁️ Optional Deployment on AWS EC2**
 Launch an Ubuntu EC2 instance.
 
 Install Python, MySQL, and dependencies:
 
-bash
-Copy code
+
 sudo apt update
 sudo apt install python3-pip mysql-server
 Clone your GitHub repository:
 
-bash
-Copy code
-git clone https://github.com/swati-zampal/stud-reg-flask-app.git
+
+git clone https://github.com/Aniket2699/Student-Registeration_flask-app.git
 Set up .env with production credentials.
 
 Run the app using Gunicorn:
 
-bash
-Copy code
+
 gunicorn --bind 0.0.0.0:8000 app:app
 Configure Nginx as a reverse proxy.
 
-⚡ Optional Jenkins CI/CD Integration
+### **⚡ Optional Jenkins CI/CD Integration**
 You can integrate this project with Jenkins for continuous deployment:
 
 Jenkins pulls the latest code from GitHub.
@@ -208,11 +198,11 @@ Builds and deploys the Flask app to AWS EC2 automatically.
 
 Ensures smooth and automated deployment cycles.
 
-🔗 GitHub Repository
+### **🔗 GitHub Repository**
 GitHub Repo Link
 https://github.com/Aniket2699/Student-Registeration_flask-app.git
 
-💡 Future Enhancements
+### **💡 Future Enhancements**
 Add admin authentication
 
 Export student data to CSV/Excel
@@ -221,7 +211,7 @@ Implement search and filtering
 
 Build a REST API for mobile app integration
 
-👨‍💻 Author
+### **👨‍💻 Author**
 Aniket Dauskar
 📧 Email: aniketdauskar99@gmail.com
 🔗 LinkedIn: linkedin.com/in/aniketdauskar
